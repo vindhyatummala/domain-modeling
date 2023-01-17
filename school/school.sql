@@ -16,4 +16,35 @@ CREATE TABLE students (
 
 -- Create the rest of the tables
 
+CREATE TABLE teachers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT,
+  last_name TEXT,
+  bio TEXT
+);
 
+CREATE TABLE courses (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  description TEXT
+);
+
+CREATE TABLE sections (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  time TEXT,
+  course_id INTEGER,
+  teacher_id INTEGER
+);
+
+INSERT INTO sections (
+  "time",
+  "course_id",
+  "teacher_id"
+) VALUES (
+  "Thursday 6-9pm",
+  "2",
+  "1"
+  )
+;
+
+SELECT * FROM sections;
